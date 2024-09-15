@@ -1,3 +1,3 @@
 # Airbnb-Website
 
-please visit:https://prayan.onrender.com/listings/new
+please visit:https://prayan.onrender.com
