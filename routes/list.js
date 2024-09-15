@@ -11,6 +11,7 @@ const listingcontroller=require("../controllers/listings.js")
 
 
 //router.route
+
 router.route("/")
 .get(wrapasync(listingcontroller.index))
 .post(isloggedin,upload.single('lists[image]'),validatelisting,

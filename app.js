@@ -50,7 +50,7 @@ app.use(express.static(path.join(__dirname,"/public")));
 const store = mongostore.create({
     mongoUrl: dburl, // Use 'mongoUrl' instead of 'mongourl'
     crypto: {
-        secret: process.env.SECRET, // Secret for encrypting the session
+        secret:process.env.SECRET, // Secret for encrypting the session
     },
     touchAfter: 24 * 3600, // In seconds, session will only be updated once every 24 hours
 });
@@ -96,9 +96,10 @@ passport.use(new LocalStrategy(user.authenticate()));
 passport.serializeUser(user.serializeUser());
 passport.deserializeUser(user.deserializeUser());
   
-// app.get("/",(req,res)=>{
-//     res.send("i am root");
-// })
+app.get("/",(req,res)=>{
+    res.redirect("./listings");
+    
+})
 
 
 app.use("/listings",listingrouter);
