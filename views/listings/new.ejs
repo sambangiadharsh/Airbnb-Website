@@ -1,0 +1,56 @@
+<%- layout('/layouts/boilerplate') %>
+<body>
+    
+    <form method="POST" action="/listings" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <div class="row">
+            <div class="col-7 offset-2">
+                <h3>create new listing</h3>
+                <div>
+                    <lable for="title" class="form-label">Title</lable>
+                    <input type="text"  name="lists[title]"  required placeholder="enter title" class="form-control">
+                    <div class="invalid-feedback">Looks good!</div>
+                </div>
+                <div>
+                    <lable for="description" class="form-label">Description</lable>
+                    <textarea name="lists[description]" required placeholder="enter description" class="form-control" type="text"></textarea>
+                    <div class="invalid-feedback">Looks good!</div>
+                </div>
+                <div>
+                    <lable for="image" class="form-label">Upload listing image</lable>
+                    <input name="lists[image]"  required type="file" class="form-control" >
+                </div>
+                <div class="row">
+
+                <div class="col-md-4">
+                    <lable for="price" class="form-label">Price</lable>
+                    <input name="lists[price]"  required  placeholder="enter price" class="form-control" >
+                    <div class="invalid-feedback">Price must be valid.</div>
+                  
+                </div>
+                <div class="col-md-8">
+                    <lable for="country" class="form-label">country</lable>
+                    <input name="lists[country]"  type="text" required  placeholder="enter country"  class="form-control">
+                    <div class="invalid-feedback">Country must be valid.</div>
+                </div>
+
+                </div>
+               
+                <div>
+                    <lable for="location" class="form-label">location</lable>
+                    <input name="lists[location]"  type="text" required  placeholder="enter location" class="form-control">
+                    <div class="invalid-feedback">Location must be valid.</div>
+                </div>
+                <br>
+               
+            <button class="btn btn-primary">Add</button>  
+    
+            
+        </form>
+        <br><br>
+                 
+            </div>
+        </div>
+    
+          
+    
+</body>
